@@ -1,0 +1,177 @@
+/*apply to all elements*/
+*{
+    /*set font of all elements*/
+    font-style:normal;
+    font-family: 'Gemunu Libre', sans-serif;
+}
+
+/*apply to elements in body class*/
+.body {
+    /*margins*/
+    margin: auto;
+
+    /*padding*/
+    padding-top: 25px;
+    padding-bottom: 25px;
+    padding-left: 25px;
+    padding-right: 25px;
+
+    /*border*/
+    border-style: dashed;
+    border-color: green;
+    border-width: 5px;
+    border-radius: 5px;
+
+    /*background color*/
+    background-color:rgb(203, 255, 226);
+  }
+
+  /*create a grid in the header*/
+  header {
+      display: grid;
+      grid-gap: 10px;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+
+
+  }
+
+  /* place top in grid*/
+  #top {
+    grid-column: 1/3;
+  }
+
+  /*place attendance in grid*/
+  #attendance{
+    grid-row: 2/4; 
+    text-align:center;
+  }
+
+  /*place agenda in grid*/
+  #agenda{
+     grid-row: 2/4;
+     align-content: center;
+  }
+
+/*apply to elements with title id*/
+  #title{
+      position:static;
+      text-align: center;
+      color: pink;
+      text-decoration:underline;
+  }
+
+/*apply to psuedo-class local links*/
+#submit:hover{
+    color: #3ff;
+}
+
+/*artibute selection for local links*/
+a[href^="#"] {
+    background-color: hsl(0, 0%, 100%);
+  }
+
+/*selector list*/
+h2, h3 {
+    margin: 3pt 3pt 3pt 3pt;
+    text-align: center;
+}
+
+/*change span font relative to parent*/
+span {
+    font-size: 2em;
+}
+
+/*element selector*/
+img {
+    display: inline-block;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin-left: 5px;
+    margin-right: 5px;
+    padding: 5px 5px 5px 5px;
+    position: relative; 
+    height: 3in;
+    width: 5in;
+}
+
+/*flexbox*/
+.bottom {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    flex-direction: row-reverse; 
+}
+
+/*set max/min width*/
+video {
+    max-width:max-content;
+    min-width: auto;
+}
+
+
+/*descendant combinator*/
+ul li {
+    color: green; 
+  }
+
+/*child combinator*/
+ol > li {
+    color: blue;
+}
+
+/*general sibling combinator*/
+p ~ span {
+    color: red;
+}
+
+/*adjacent sibling combinator*/
+p + details {
+    font-weight: bold;
+}
+
+/*combining two selectors*/
+.unfinished, #new {
+    color:rgb(10, 124, 80);
+}
+
+/*display properties*/
+#new{
+    display: block;
+}
+
+/*media query based on screen width*/
+@media only screen and (max-width: 600px) {
+    img {
+        width:65vw;
+        height:25vh;
+    }
+
+/*use active psuedoclass*/
+a:active {
+    color: red;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
