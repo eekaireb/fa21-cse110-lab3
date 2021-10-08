@@ -6,21 +6,31 @@
         <title>Pomodoro Timer First Brainstorm</title>
         <link rel="icon" 
             href="favicon.ico" />
+        <link rel="stylesheet"
+            href="style.css" />
+
+        <link rel="preconnect" href="https://fonts.googleapis.com"> 
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+        <link href="https://fonts.googleapis.com/css2?family=Gemunu+Libre:wght@200&display=swap" rel="stylesheet">
     </head>
-    <body>
+    <body class="body">
         <header>
-            <h1>Pomodoro Timer First Brainstrom</h1>
-            <h2>Meeting Topic: Brainstroming</h2>
-            <h3>10/1/21</h3>
-            <hr>
-            <h2>Attendance</h2>
-            <div>Emily E</div>
-            <div>Emily G</div>
-            <div>Emily L</div>
+            <section id="top">
+                <h1 id="title">Pomodoro Timer First Brainstrom</h1>
+                <h2>Meeting Topic: Brainstroming</h2>
+                <h3>10/1/21</h3>
+            </section>
 
-            <hr>
+            <section id="attendance">
+                <h2>Attendance</h2>
+                <div>Emily E</div>
+                <div>Emily G</div>
+                <div>Emily L</div>
+            </section>
 
-            <nav>
+            
+
+            <nav class="agenda">
                 <h2>Agenda</h2>
                 <ul>
                     <li><a href="#unfinised">Unfinished Businessed</a></li>
@@ -32,12 +42,12 @@
             <hr>
         </header>
         <main>
-            <section id="unfinished">
+            <section class="unfinished">
                 <h2>Unfinshed Business</h2>
                 <ol>
                     <li>Finished downloading VS code</li>
                     <li>Finished discussing the book, <i>The Pomodoro Technique</i> </li>
-                    <li>Added all members to a <span>Github</span></li>
+                    <li>Added all members to a Github</li>
                 </ol>
                 
             </section>
@@ -50,6 +60,8 @@
                     would be the easiest way to implement the Pomodoro technique, and she also thinks she is the <em>best</em> at making chrome extensions. <br>
                     Issue: would be a <strong>very limited scope/usuability for application.</strong> 
                 </p>
+
+                <span> A second idea. </span>
                 
                 <p>Another option is to make an app for the <b>Apple Store/Google Play store</b>. <br>
                     More expansive use possible. Emily E likes this idea because there would be more users and uses for the application. <br>
@@ -81,57 +93,62 @@
                 />
             </section>
             <hr>
-            <section id="recording">
-                <h2>Meeting Recording</h2>
-                <video width="320" height="240" controls>
-                    <source src="video.mov" type="video/mp4">
-                  Your browser does not support the video tag.
-                  </video>
-                <h3>Meeting Audio Only</h3>
-                <audio controls>
-                    <source src="audio.mp3" type="audio/mp3">
-                </audio>
+            <section class="bottom">
+                <section id="recording">
+                    <h2>Meeting Recording</h2>
+                    <video width="320" height="240" controls>
+                        <source src="video.mov" type="video/mp4">
+                    Your browser does not support the video tag.
+                    </video>
+                    </section>
+
+                <section id="audio">
+                    <h3>Meeting Audio Only</h3>
+                    <audio controls>
+                        <source src="audio.mp3" type="audio/mp3">
+                    </audio>
+                </section>
+
+                <form>
+                    <fieldset>
+                        <legend>New Member Information</legend>
+                        <label for="name">Enter your name:</label><br>
+                        <input type="text" id="name" name="name"><br>
+                        <label for="read">I read the team's rules.</label><br>
+                        <input type="checkbox" id="read" name="read"><br>
+                        <label for="condition">I agree to the team's rules.</label><br>
+                        <input type="radio" id="condition" name="condition"><br>
+                        <label for="date">Enter today's date.</label><br>
+                        <input type="date" id="date" name="date"><br>
+                        <label for="why">Tell us why you want to become a member of our team:</label><br>
+                        <textarea id="why" name="why"
+                                rows="5" cols="33">
+                        </textarea><br>
+                        <label for="position-choice">Choose a position if you would like one:</label>
+                        <input list="positions" id="position-choice" name="position-choice" />
+
+                        <datalist id="positions">
+                            <option value="Note-taker">
+                            <option value="Treasurer">
+                            <option value="Researcher">
+                        </datalist><br>
+
+                        <label for="interview">When can you come in for an interview:</label>
+                        <select id="interview">
+                            <option value="tmrw">Tommorrow</option>
+                            <option value="nextweek">Next Week</option>
+                            <option value="tba">TBA</option>
+                            </select><br>
+
+                        <button type="button" id="submit">Submit</button>
+                    </fieldset>  
+                </form>
             </section>
-            <hr>
-
-            <form>
-                <fieldset>
-                    <legend>New Member Information</legend>
-                    <label for="name">Enter your name:</label><br>
-                    <input type="text" id="name" name="name"><br>
-                    <label for="read">I read the team's rules.</label><br>
-                    <input type="checkbox" id="read" name="read"><br>
-                    <label for="condition">I agree to the team's rules.</label><br>
-                    <input type="radio" id="condition" name="condition"><br>
-                    <label for="date">Enter today's date.</label><br>
-                    <input type="date" id="date" name="date"><br>
-                    <label for="why">Tell us why you want to become a member of our team:</label><br>
-                    <textarea id="why" name="why"
-                            rows="5" cols="33">
-                    </textarea><br>
-                    <label for="position-choice">Choose a position if you would like one:</label>
-                    <input list="positions" id="position-choice" name="position-choice" />
-
-                    <datalist id="positions">
-                        <option value="Note-taker">
-                        <option value="Treasurer">
-                        <option value="Researcher">
-                    </datalist><br>
-
-                    <label for="interview">When can you come in for an interview:</label>
-                    <select id="interview">
-                        <option value="tmrw">Tommorrow</option>
-                        <option value="nextweek">Next Week</option>
-                        <option value="tba">TBA</option>
-                        </select><br>
-
-                    <button type="button">Submit</button>
-                </fieldset>  
-            </form>
             <hr>
         </main>
         <footer>
             <div>Reach out if you have an issues before the next meeting!</div>
+            <button type="submit" id="email">Email me!</button>
         </footer>
     </body>
 </html>
